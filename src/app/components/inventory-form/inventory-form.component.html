@@ -1,0 +1,36 @@
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="nombre" nzRequired>Nombre</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Por favor, ingresa el nombre">
+      <input nz-input formControlName="nombre" id="nombre" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="descripcion" nzRequired>Descripción</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Por favor, ingresa la descripción">
+      <input nz-input formControlName="descripcion" id="descripcion" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="cantidad" nzRequired>Cantidad</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Por favor, ingresa la cantidad">
+      <input nz-input formControlName="cantidad" id="cantidad" type="number" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="precio" nzRequired>Precio</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Por favor, ingresa el precio">
+      <input nz-input formControlName="precio" id="precio" type="number" step="0.01" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control [nzSm]="14" [nzXs]="24" [nzOffset]="6">
+      <button nz-button nzType="primary" [disabled]="!form.valid">Submit</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

@@ -1,0 +1,9 @@
+
+<nz-card *ngIf="item">
+  <nz-card-meta
+    nzTitle="{{ item.nombre }}"
+    nzDescription="{{ item.descripcion }}"
+  ></nz-card-meta>
+  <p>Cantidad: {{ item.cantidad }}</p>
+  <p>Precio: {{ item.precio }}</p>
+</nz-card>
